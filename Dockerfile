@@ -1,10 +1,10 @@
 # Use official Node.js image
 FROM node:18
 
-# Set working directory
+# Set working directory inside container
 WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
+# Copy package.json and install dependencies from app folder
 COPY app/package*.json ./
 RUN npm install
 
