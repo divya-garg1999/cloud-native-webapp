@@ -1,12 +1,12 @@
 const express = require('express');
-
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.send('🚀 Cloud-Native Web App running with DevOps tools!');
+  res.send('Hello World!');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(3000, () => console.log('App running on port 3000'));
+}
+
+module.exports = app;
