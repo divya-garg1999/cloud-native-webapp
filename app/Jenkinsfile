@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Test Docker Access') {
+            steps {
+                sh 'docker ps'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+    }
+
+    post {
+        always {
+            sh 'docker rm -f divya-cloud-native-app-container || true'
+        }
+        success {
+            echo 'Pipeline completed successfully 🚀'
+        }
+        failure {
+            echo 'Pipeline failed ❌'
+        }
+    }
+}
