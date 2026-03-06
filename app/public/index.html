@@ -1,44 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Cloud Native Resume Project</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    #api-response {
-      margin-top: 20px;
-      padding: 10px;
-      background: #ecf0f1;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Hello World! Cloud Native Resume Project</h1>
-  <p>This frontend is hosted on <strong>Netlify</strong> with HTTPS.</p>
-  <p>The backend API is running on <strong>AWS ELB</strong>.</p>
-
-  <h3>Live API Response:</h3>
-  <div id="api-response">Loading...</div>
-
-  <script>
-    // ✅ Updated to your current ELB DNS
-    const apiUrl = "http://a7767ba3d4f0f4d60b241f12adca65a8-15853688.ap-south-1.elb.amazonaws.com";
-
-    fetch(apiUrl)
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("api-response").innerText = data;
-      })
-      .catch(error => {
-        document.getElementById("api-response").innerText = "Error fetching API: " + error;
-      });
-  </script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cloud Native Resume Project</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
+
