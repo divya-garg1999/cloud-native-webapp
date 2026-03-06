@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudnativewebapp
+  namespace: cloudnative-app   # ✅ must match your namespace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloudnativewebapp
+  template:
+    metadata:
+      labels:
+        app: cloudnativewebapp
+    spec:
+      containers:
+      - name: cloudnativewebapp
+        image: 649844050601.dkr.ecr.ap-south-1.amazonaws.com/cloud-native-webapp:v2
+        ports:
+        - containerPort: 3000   # ✅ matches your Node.js app
