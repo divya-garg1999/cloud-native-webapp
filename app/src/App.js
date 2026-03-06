@@ -6,7 +6,7 @@ function App() {
     <div className="resume-container">
       <header className="header">
         <h1>Divya Garg</h1>
-        <p>DevOps Engineer | Cloud-Native Enthusiast</p>
+        <p className="tagline">DevOps Engineer | Cloud-Native Enthusiast</p>
       </header>
 
       <section className="about">

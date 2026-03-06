@@ -24,6 +24,11 @@ body {
   color: #2c3e50;
 }
 
+.tagline {
+  font-size: 1.2em;
+  color: #555;
+}
+
 section {
   margin-bottom: 25px;
 }
